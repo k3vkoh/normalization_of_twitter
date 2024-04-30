@@ -11,7 +11,7 @@ hifi_gan = HIFIGAN.from_hparams(source="speechbrain/tts-hifigan-ljspeech", saved
 storage_path = 'tts/'
 
 def text_to_speech(text):
-    now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    mel_output, mel_length, alignment = tacotron2.encode_text(text)
-    waveforms = hifi_gan.decode_batch(mel_output)
-    torchaudio.save(storage_path + now + '.wav',waveforms.squeeze(1), 22050)
+	now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+	mel_output, mel_length, alignment = tacotron2.encode_text(text)
+	waveforms = hifi_gan.decode_batch(mel_output)
+	torchaudio.save(storage_path + now + '.wav',waveforms.squeeze(1), 22050)
