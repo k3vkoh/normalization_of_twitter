@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Twitter Normalizer</title>
+	<meta charset="UTF-8">
+	<title>Twitter Normalizer</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="static/home.js"></script>
 </head>
 <body>
-    <h1>Twitter Normalizer</h1>
-    <p>This is a sample HTML template.</p>
+	<nav>
+		<ul>
+			<li><a href="/">Twitter Normalization</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
+	</nav>
+	<main>
+		<p>Normalize your tweets!</p>
+		<p>Enter a tweet below and click the "Normalize" button to see the normalized version.</p>
+		<form id="tweetForm">
+			<label>
+				<input type="radio" name="option" value="crf" checked> CRF
+			</label>
+			<label>
+				<input type="radio" name="option" value="nocrf"> No CRF
+			</label>
+			<div>
+				<label>Tweet:</label>
+				<input type="text" name="tweet" id="tweet">
+			</div>
+			<div>
+				<button type="submit">Normalize</button>
+			</div>
+		</form>
+		<p id="result"></p>
+	</main>
 </body>
 </html>

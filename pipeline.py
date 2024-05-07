@@ -36,6 +36,6 @@ def main(text):
 	print("Without CRF:", pipeline_no_crf(text))
 
 if __name__ == '__main__':
-  print('Enter a sentence:')
-  text = input().split()
-  main(text)
+	print('Enter a sentence:')
+	text = input().split()
+	main(text)
