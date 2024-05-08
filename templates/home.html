@@ -5,16 +5,17 @@
 	<title>Twitter Normalizer</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="static/home.js"></script>
+	<link rel="stylesheet" href="static/home.css">
 </head>
 <body>
 	<nav>
 		<ul>
-			<li><a href="/">Twitter Normalization</a></li>
 			<li><a href="/">Home</a></li>
 			<li><a href="/about">About</a></li>
 		</ul>
 	</nav>
 	<main>
+		<h1>Twitter Normalizer</h1>
 		<p>Normalize your tweets!</p>
 		<p>Enter a tweet below and click the "Normalize" button to see the normalized version.</p>
 		<form id="tweetForm">
@@ -24,11 +25,11 @@
 			<label>
 				<input type="radio" name="option" value="nocrf"> No CRF
 			</label>
-			<div>
+			<div id="tweetenter">
 				<label>Tweet:</label>
 				<input type="text" name="tweet" id="tweet">
 			</div>
-			<div>
+			<div id="tweetsubmit">
 				<button type="submit">Normalize</button>
 			</div>
 		</form>
