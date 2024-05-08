@@ -17,5 +17,9 @@ def predict():
 		result = pipeline.pipeline_with_crf(sentence)
 	return jsonify(result=result)
 
+@app.route('/about')
+def about():
+	return render_template('about.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)
